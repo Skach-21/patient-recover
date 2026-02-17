@@ -24,7 +24,7 @@ st.markdown("""
     <style>
     /* Main background */
     .stApp {
-        background-color: #f8f9fa;
+        background-color: grey;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
@@ -40,7 +40,7 @@ st.markdown("""
 
     /* Input section box */
     .input-box {
-        background-color: #ffffff;
+        background-color: yellow;
 	color: pink;
         padding: 20px;
         border-radius: 12px;
