@@ -30,7 +30,7 @@ st.markdown("""
 
     /* Header styling */
     .header-box {
-        background-color: blue-dark;
+        background-color:#003366 ;
         color: white;
         padding: 25px;
         border-radius: 12px;
