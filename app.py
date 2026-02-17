@@ -127,3 +127,69 @@ if st.button("Predict Recovery Days"):
 # -----------------------------
 st.markdown('<div class="footer">This prediction is for educational purposes and not medical advice.</div>', 
             unsafe_allow_html=True)
+
+
+
+
+
+import streamlit as st
+import pandas as pd
+import pickle
+
+# Load model
+with open("model.pkl", "rb") as f:
+    model = pickle.load(f)
+
+# CSS for labels hover
+st.markdown("""
+<style>
+.label:hover {
+    color: #003366;
+    font-weight: bold;
+    cursor: pointer;
+}
+</style>
+""", unsafe_allow_html=True)
+
+# Input section
+st.header("Patient Information")
+
+# Custom labels with hover effect
+age = st.number_input(
+    label='<span class="label">Age</span>', 
+    min_value=0, max_value=120, value=30, 
+    format="%d", key="age", 
+    help="Enter patient age", 
+    unsafe_allow_html=True
+)
+
+gender_input = st.selectbox(
+    label='<span class="label">Gender</span>',
+    options=["M", "F"],
+    index=0,
+    help="Select gender",
+    key="gender",
+    format_func=lambda x: x,
+    unsafe_allow_html=True
+)
+
+fever_input = st.selectbox(
+    label='<span class="label">Fever</span>',
+    options=["No","Yes"],
+    key="fever",
+    unsafe_allow_html=True
+)
+
+fatigue_input = st.selectbox(
+    label='<span class="label">Fatigue</span>',
+    options=["No","Yes"],
+    key="fatigue",
+    unsafe_allow_html=True
+)
+
+heart_rate = st.number_input(
+    label='<span class="label">Heart Rate (bpm)</span>',
+    min_value=40, max_value=200, value=75,
+    key="hr",
+    unsafe_allow_html=True
+)
