@@ -30,8 +30,8 @@ st.markdown("""
 
     /* Header styling */
     .header-box {
-        background-color: #003366;
-        color: green;
+        background-color: blue;
+        color: white;
         padding: 25px;
         border-radius: 12px;
         text-align: center;
@@ -40,7 +40,7 @@ st.markdown("""
 
     /* Input section box */
     .input-box {
-        background-color: yellow;
+        background-color:white ;
 	color: pink;
         padding: 20px;
         border-radius: 12px;
@@ -49,8 +49,8 @@ st.markdown("""
 
     /* Prediction box */
     .prediction-box {
-        background-color: #d1e7dd;
-        color: yellow;
+        background-color: blue-dark;
+        color: cyan;
         padding: 20px;
         border-radius: 12px;
         text-align: center;
@@ -61,7 +61,7 @@ st.markdown("""
     }
 
     .prediction-box:hover {
-        background-color: red;
+        background-color: white;
     }
 
     /* Button hover */
@@ -74,7 +74,7 @@ st.markdown("""
     /* Footer */
     .footer {
         text-align: center;
-        color: purple;
+        color: white;
         font-size: 0.9em;
         margin-top: 20px;
     }
